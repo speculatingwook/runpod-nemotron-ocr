@@ -63,7 +63,7 @@ Create a custom Serverless endpoint from Docker registry/template:
 
 ```text
 Endpoint type: Queue
-GPU: A100 or L40S
+GPU: RTX 4090, L40S, A100, or A40 fallback
 Allowed CUDA version: 13.0
 Min workers: 0
 Max workers: 1

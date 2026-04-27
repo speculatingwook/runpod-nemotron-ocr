@@ -8,7 +8,7 @@ ENV TRANSFORMERS_CACHE=/runpod-volume/hf
 ENV TORCH_HOME=/runpod-volume/torch
 ENV NEMOTRON_LANG=multi
 ENV NEMOTRON_MODEL_DIR=/opt/nemotron-ocr-v2/v2_multilingual
-ENV TORCH_CUDA_ARCH_LIST="8.0;8.9+PTX"
+ENV TORCH_CUDA_ARCH_LIST="8.0;8.6;8.9+PTX"
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \

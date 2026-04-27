@@ -8,7 +8,7 @@
     "allowedCudaVersions": ["13.0"],
     "containerDiskInGb": 40,
     "gpuCount": 1,
-    "gpuIds": "ADA_24,ADA_48_PRO,AMPERE_80",
+    "gpuIds": "ADA_24,ADA_48_PRO,AMPERE_80,AMPERE_48",
     "presets": [
       {
         "name": "Multilingual OCR",
