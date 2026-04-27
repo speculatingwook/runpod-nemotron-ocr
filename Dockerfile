@@ -26,7 +26,7 @@ RUN python -m pip install --upgrade pip && \
 
 RUN git lfs install && \
     git clone https://huggingface.co/nvidia/nemotron-ocr-v2 /opt/nemotron-ocr-v2 && \
-    cd /opt/nemotron-ocr-v2 && \
+    cd /opt/nemotron-ocr-v2/nemotron-ocr && \
     pip install --no-build-isolation -v .
 
 COPY handler.py /app/handler.py
