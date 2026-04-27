@@ -64,6 +64,7 @@ Create a custom Serverless endpoint from Docker registry/template:
 ```text
 Endpoint type: Queue
 GPU: A100 or L40S
+Allowed CUDA version: 13.0
 Min workers: 0
 Max workers: 1
 Idle timeout: 60-120s

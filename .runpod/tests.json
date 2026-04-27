@@ -14,6 +14,7 @@
   "config": {
     "gpuTypeId": "NVIDIA GeForce RTX 4090",
     "gpuCount": 1,
+    "allowedCudaVersions": ["13.0"],
     "env": [
       {
         "key": "NEMOTRON_LANG",
