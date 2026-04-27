@@ -1,0 +1,40 @@
+{
+  "tests": [
+    {
+      "name": "ocr_single_page_pdf_url",
+      "input": {
+        "pdf_url": "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+        "pages": [[1, 1]],
+        "dpi": 150,
+        "merge_level": "paragraph"
+      },
+      "timeout": 900000
+    }
+  ],
+  "config": {
+    "gpuTypeId": "NVIDIA GeForce RTX 4090",
+    "gpuCount": 1,
+    "env": [
+      {
+        "key": "NEMOTRON_LANG",
+        "value": "multi"
+      },
+      {
+        "key": "NEMOTRON_MODEL_DIR",
+        "value": "/opt/nemotron-ocr-v2/v2_multilingual"
+      },
+      {
+        "key": "HF_HOME",
+        "value": "/runpod-volume/hf"
+      },
+      {
+        "key": "TRANSFORMERS_CACHE",
+        "value": "/runpod-volume/hf"
+      },
+      {
+        "key": "TORCH_HOME",
+        "value": "/runpod-volume/torch"
+      }
+    ]
+  }
+}

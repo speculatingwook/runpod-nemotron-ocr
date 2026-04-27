@@ -1,0 +1,52 @@
+{
+  "title": "Nemotron OCR v2 Worker",
+  "description": "Runpod Serverless worker for NVIDIA Nemotron OCR v2 PDF and document-image OCR.",
+  "type": "serverless",
+  "category": "image",
+  "config": {
+    "runsOn": "GPU",
+    "containerDiskInGb": 40,
+    "gpuCount": 1,
+    "gpuIds": "ADA_24,ADA_48_PRO,AMPERE_80",
+    "presets": [
+      {
+        "name": "Multilingual OCR",
+        "defaults": {
+          "NEMOTRON_LANG": "multi",
+          "NEMOTRON_MODEL_DIR": "/opt/nemotron-ocr-v2/v2_multilingual",
+          "HF_HOME": "/runpod-volume/hf",
+          "TRANSFORMERS_CACHE": "/runpod-volume/hf",
+          "TORCH_HOME": "/runpod-volume/torch"
+        }
+      }
+    ],
+    "env": [
+      {
+        "key": "NEMOTRON_LANG",
+        "input": {
+          "name": "Nemotron language",
+          "type": "string",
+          "description": "Nemotron OCR language variant to load.",
+          "default": "multi",
+          "advanced": true
+        }
+      },
+      {
+        "key": "NEMOTRON_MODEL_DIR",
+        "value": "/opt/nemotron-ocr-v2/v2_multilingual"
+      },
+      {
+        "key": "HF_HOME",
+        "value": "/runpod-volume/hf"
+      },
+      {
+        "key": "TRANSFORMERS_CACHE",
+        "value": "/runpod-volume/hf"
+      },
+      {
+        "key": "TORCH_HOME",
+        "value": "/runpod-volume/torch"
+      }
+    ]
+  }
+}

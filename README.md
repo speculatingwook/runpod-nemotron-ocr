@@ -1,5 +1,7 @@
 # RunPod Nemotron OCR Worker
 
+[![Runpod](https://api.runpod.io/badge/speculatingwook/runpod-nemotron-ocr)](https://console.runpod.io/hub/speculatingwook/runpod-nemotron-ocr)
+
 RunPod Serverless worker for NVIDIA Nemotron OCR v2. The container installs the
 Nemotron OCR package from the Hugging Face repository, renders PDF pages with
 PyMuPDF, and keeps the OCR model in a process-level cache so warm workers do not
@@ -12,7 +14,9 @@ reload the model for every request.
 - `requirements.txt` - runtime dependencies for the worker.
 - `scripts/preload_model.py` - optional runtime model-load smoke check.
 - `test_input.json` - initial RunPod request body.
-- `.github/workflows/build-image.yml` - GHCR linux/amd64 image build.
+- `.runpod/hub.json` - RunPod Hub listing metadata and deploy defaults.
+- `.runpod/tests.json` - RunPod Hub release validation test.
+- `.github/workflows/build-image.yml` - Docker Hub linux/amd64 image build.
 
 ## Local Checks
 
