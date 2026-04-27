@@ -1,0 +1,8 @@
+{
+  "input": {
+    "pdf_url": "https://example.com/03-book5-part1-intro-missing-p031-036.pdf",
+    "pages": [[1, 6]],
+    "dpi": 200,
+    "merge_level": "paragraph"
+  }
+}

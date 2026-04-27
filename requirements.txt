@@ -1,0 +1,6 @@
+runpod
+pymupdf
+pillow
+requests
+boto3
+huggingface_hub
